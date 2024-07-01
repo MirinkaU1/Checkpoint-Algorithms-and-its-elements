@@ -1,0 +1,37 @@
+ALGORITHM analyseMots;
+VAR
+  ch: char;
+  longueur, mots, voyelles: integer;
+  dansMot: boolean;
+BEGIN
+  longueur := 0;
+  mots := 0;
+  voyelles := 0;
+  dansMot := false;
+
+  writeln('Entrez une phrase se terminant par un point:');
+  repeat
+    read(ch);
+    longueur := longueur + 1;
+    
+    // Vérifier si le caractère est une voyelle
+    if (ch = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']) then
+      voyelles := voyelles + 1;
+    
+    // Vérifier si le caractère fait partie d'un mot
+    if (ch <> ' ') then
+      if (not dansMot) then
+        dansMot := true;
+        mots := mots + 1;
+    else
+      dansMot := false;
+
+  until ch = '.';
+
+  // Exclure le point de la longueur
+  longueur := longueur - 1;
+
+  writeln('Longueur de la phrase: ', longueur);
+  writeln('Nombre de mots: ', mots);
+  writeln('Nombre de voyelles: ', voyelles);
+END;

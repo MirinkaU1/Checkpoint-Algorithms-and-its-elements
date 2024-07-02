@@ -14,7 +14,7 @@ BEGIN
     longueurPhrase := longueurPhrase + 1;
     
     // Vérifier si le caractère est une voyelle
-    IF (phrase = 'a' or phrase = 'e' or phrase = 'i' or phrase = 'o' or phrase = 'u' or phrase = 'A' or phrase = 'E' or phrase = 'I' or phrase = 'O' or phrase = 'U') THEN
+    IF ((phrase = 'a') or (phrase = 'e') or (phrase = 'i') or (phrase = 'o') or (phrase = 'u') or (phrase = 'A') or (phrase = 'E') or (phrase = 'I') or (phrase = 'O') or (phrase = 'U')) THEN
       nombreVoyelles := nombreVoyelles + 1;
     END_IF;
     

@@ -1,8 +1,8 @@
 ALGORITHM analyseMots;
 VAR
-  phrase: char;
-  longueurPhrase, nombreMots, nombreVoyelles: integer;
-  dansMot: boolean;
+  phrase: CHAR;
+  longueurPhrase, nombreMots, nombreVoyelles: INTEGER;
+  dansMot: BOOLEAN;
 BEGIN
   longueurPhrase := 0;
   nombreMots := 0;
